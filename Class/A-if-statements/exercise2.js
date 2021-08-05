@@ -1,13 +1,14 @@
 
 // Change the value of myRole so your code prints "Good morning, get ready to learn!"
-let myRole = "mentor";
+//let myRole = "mentor";
+let myRole = "student";
 
 let greeting = "Good morning, ";
 
 // Here we have an "if/else" statement
-if(myRole === "student"){
+if (myRole === "student") {
     greeting = greeting + "get ready to learn!";
-}else{
+} else {
     greeting = greeting + "get ready to teach!";
 }
 
