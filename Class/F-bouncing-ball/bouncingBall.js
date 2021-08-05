@@ -6,7 +6,7 @@ let screenHeight;
 let speedX;
 let speedY;
 
-function moveBall(){
+function moveBall() {
     // positionX += speedX;
     // positionY += speedY;
 
@@ -17,6 +17,21 @@ function moveBall(){
     // if(positionY > screenHeight || positionY < 0){
     //     speedY *= -1;
     // }
+    // if(positionY > screenHeight || positionY < 0){
+    //     speedY *= -1;
+    // }
+
+
+    positionX += speedX;
+    positionY += speedY;
+
+    if (positionX > screenWidth || positionX < 0) {
+        speedX *= -1;
+    }
+
+    if (positionY > screenHeight || positionY < 0) {
+        speedY *= -1;
+    }
 }
 
 
@@ -28,13 +43,13 @@ window.setInterval(movementLoop, 10);
 
 let ball = document.querySelector('#ballDiv');
 
-function movementLoop(){
+function movementLoop() {
     moveBall();
     ball.style.left = positionX + "px";
     ball.style.top = positionY + "px";
 }
 
-function intialiseValues(){
+function intialiseValues() {
     screenWidth = window.innerWidth;
     screenHeight = window.innerHeight;
     positionX = (screenWidth / 3);
